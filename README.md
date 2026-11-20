@@ -1,26 +1,16 @@
-# Galaxy Bridge 1.3
+# Galaxy Bridge 1.4
 
-Prototipo web experimental para explorar dispositivos Bluetooth Low Energy mediante Web Bluetooth.
+Prototipo experimental para explorar dispositivos Bluetooth Low Energy mediante Web Bluetooth.
 
-## Funciones
-- Selector de dispositivos BLE desde el navegador.
-- Intento de conexión GATT y desconexión.
-- Enumeración de servicios y características accesibles.
+## Mejoras de 1.4
+- Diagnóstico de soporte del navegador y HTTPS antes de buscar.
+- Mensajes de error comprensibles y registro de actividad.
+- Selector BLE, intento de conexión GATT, desconexión y servicios accesibles.
 - Intento de lectura del servicio estándar de batería.
-- Registro de actividad y errores.
+- Interfaz móvil azul marino y azul eléctrico.
 
-## Uso
-1. Publica los archivos `index.html`, `style.css` y `app.js` en GitHub Pages (Settings → Pages → Deploy from a branch → main → /root).
-2. Abre la URL HTTPS resultante en **Chrome para Android**.
-3. Activa Bluetooth y pulsa **Buscar dispositivos**.
-4. Selecciona un dispositivo BLE disponible y revisa el registro.
+## Publicación
+Sube `index.html`, `style.css` y `app.js` a la raíz de la rama `main` del repositorio y configura GitHub Pages para publicar desde `main` / `(root)`. Después abre la URL HTTPS en Chrome para Android.
 
-## Limitaciones importantes
-- El Galaxy Watch 8 no tiene compatibilidad oficial con iPhone; este prototipo **no** proporciona emparejamiento ni sincronización completa.
-- Web Bluetooth no está disponible en Safari de iOS; GitHub Pages no soluciona esa limitación.
-- El navegador solo expone servicios autorizados y accesibles; algunos dispositivos no aparecerán o rechazarán GATT.
-- El acceso a batería depende de que el dispositivo exponga el servicio estándar y permita leerlo.
-- No se han validado aquí conexiones físicas reales con Galaxy Watch 8.
-
-## Próxima etapa
-Investigar una app iOS nativa con CoreBluetooth y evaluar las restricciones reales del reloj, sin prometer compatibilidad.
+## Limitaciones
+El Galaxy Watch 8 no ofrece compatibilidad oficial con iPhone. Esta página no proporciona emparejamiento ni sincronización completa con el reloj. Safari en iOS no admite Web Bluetooth. Un dispositivo puede no aparecer en el selector, o no permitir conexión GATT o lectura de servicios. El nivel de batería solo aparece si se expone el servicio estándar autorizado. No se han realizado pruebas físicas de conexión con Galaxy Watch 8.
