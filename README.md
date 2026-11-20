@@ -1,16 +1,16 @@
-# Galaxy Bridge 1.4
+# Galaxy Bridge 1.5
 
-Prototipo experimental para explorar dispositivos Bluetooth Low Energy mediante Web Bluetooth.
+Prototipo web experimental de diagnóstico Bluetooth Low Energy.
 
-## Mejoras de 1.4
-- Diagnóstico de soporte del navegador y HTTPS antes de buscar.
-- Mensajes de error comprensibles y registro de actividad.
-- Selector BLE, intento de conexión GATT, desconexión y servicios accesibles.
-- Intento de lectura del servicio estándar de batería.
-- Interfaz móvil azul marino y azul eléctrico.
+## Novedades
+- Identificación **orientativa** del modelo a partir del nombre anunciado (Active2 / Watch 8 / otros); no verifica el hardware.
+- Selector Bluetooth, conexión y desconexión GATT y consulta de servicios accesibles.
+- Intento de lectura de batería BLE estándar.
+- Historial local de pruebas y exportación a TXT, sin guardar identificadores Bluetooth.
+- Diagnóstico de compatibilidad del navegador y HTTPS.
 
 ## Publicación
-Sube `index.html`, `style.css` y `app.js` a la raíz de la rama `main` del repositorio y configura GitHub Pages para publicar desde `main` / `(root)`. Después abre la URL HTTPS en Chrome para Android.
+Subir `index.html`, `style.css`, `app.js` y `README.md` a la raíz de la rama `main`. Publicar con GitHub Pages desde `main` / `(root)`. Abrir la página HTTPS con Chrome en Android.
 
 ## Limitaciones
-El Galaxy Watch 8 no ofrece compatibilidad oficial con iPhone. Esta página no proporciona emparejamiento ni sincronización completa con el reloj. Safari en iOS no admite Web Bluetooth. Un dispositivo puede no aparecer en el selector, o no permitir conexión GATT o lectura de servicios. El nivel de batería solo aparece si se expone el servicio estándar autorizado. No se han realizado pruebas físicas de conexión con Galaxy Watch 8.
+El Galaxy Watch 8 no tiene compatibilidad oficial con iPhone. Safari de iOS no soporta Web Bluetooth. La conexión GATT con un dispositivo BLE no prueba que el Watch 8 se pueda emparejar o sincronizar. Los servicios disponibles dependen del dispositivo y de permisos. No se han realizado pruebas físicas con Galaxy Watch 8.
